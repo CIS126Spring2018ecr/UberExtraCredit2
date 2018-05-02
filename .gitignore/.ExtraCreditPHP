@@ -1,0 +1,44 @@
+    <?php
+
+     $result =array('Animal','Price','Dog','1000', 'Cat', '675', 'Parakeet', '50');
+
+    if(!empty($result)) {
+
+    echo "<table border='1'>";
+    $i=0;
+
+    foreach($result as $row)
+    {
+
+   //  while ($row = $result->fetch_object()) { //here use like this 
+
+        if($i==0)
+        {
+           echo "<tr>";
+        }
+
+        echo '<td>'.$row.'</td>';
+
+        //echo "<td><b>" . $row->name . "</b></td><td>Address: " . $row->address . "</td></tr><tr><td>Phone no: " . $row->phoneno . "</td><td>Fax No:" . $row->faxno . "</td></tr><tr><td>Email: " . $row->email . "</td><td>Website: " . $row->website .
+       // "</td>";  //and your code here like this 
+
+
+        if($i==1)
+        {
+            echo "</tr>";
+
+            $i=-1;
+        }
+
+
+
+      $i++;
+
+
+    }
+
+    echo "</table>";
+
+    }
+
+    ?>
